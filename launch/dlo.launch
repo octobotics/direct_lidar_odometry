@@ -9,11 +9,11 @@
 
 <launch>
 
-  <arg name="robot_namespace" default="robot"/>
+  <arg name="robot_namespace" default="OctoCopter"/>
   <arg name="rviz" default="true"/>
 
-  <arg name="pointcloud_topic" default="lidar"/>
-  <arg name="imu_topic" default="imu"/>
+  <arg name="pointcloud_topic" default="/OctoCopter/lidar/data_raw"/>
+  <arg name="imu_topic" default="/mavros/imu/data"/>
 
   <!-- DLO Odometry Node -->
   <node ns="$(arg robot_namespace)" name="dlo_odom" pkg="direct_lidar_odometry" type="dlo_odom_node" output="screen" clear_params="true">
